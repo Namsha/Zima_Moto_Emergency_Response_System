@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <title>Zima_Moto_Emergency_Response</title>
+{% load static %}
+    <!-- ====== Google Fonts ====== -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+
+    <!-- ====== ALL CSS ====== -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar-nav">
+    
+     <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
+    </div>
+    <!-- // Preloader -->
+    
+
+    <!-- ====== Header ====== -->
+    <header id="header" class="header">
+        <!-- ====== Navbar ====== -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="#home">
+                    <img src="{% static 'images/logo.jpg' %}" alt="logo">
+                </a>
+                <!-- // Logo -->
+
+                <!-- Mobile Menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false"><span><i class="fa fa-bars"></i></span></button>
+                <!-- Mobile Menu -->
+
+                <div class="collapse navbar-collapse main-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#home">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#service">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link pr0" href="{% url "reporting" %}">REPORT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- ====== // Navbar ====== -->
+    </header>
+    <!-- ====== // Header ====== -->
+
+    <!-- ====== Hero Area ====== -->
+    <div class="hero-aria" id="home">
+        <!-- Hero Area Content -->
+        <div class="container">
+            <div class="hero-content h-100">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <h2 class="text-uppercase">Incase of an Emergency</h2>
+                         <p>Guardians of Safety: Where Courage Meets Compassion.</p>
+                        <a href="{% url "reporting" %}" class="button smooth-scroll">Make a report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- // Hero Area Content -->
+        <!-- Hero Area Slider -->
+        <div class="hero-area-slids owl-carousel">
+            <div class="single-slider">
+                <!-- Single Background -->
+                <div class="slider-bg" style="background-image: url({% static 'images/hero-area/img-1.jpg' %})"></div>
+                <!-- // Single Background -->
+            </div>
+            <div class="single-slider">
+                <!-- Single Background -->
+                <div class="slider-bg" style="background-image: url({% static 'images/hero-area/img-2.jpg' %})"></div>
+                <!-- // Single Background -->
+            </div>
+        </div>
+        <!-- // Hero Area Slider -->
+    </div>
+    <!-- ====== //Hero Area ====== -->
+
+    <!-- ====== Featured Area ====== -->
+    <section id="featured" class="section-padding pb-70">
+        <div class="container">
+            <div class="row">
+                <!-- single featured item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-featured-item-wrap">
+                        <h3><a href="#">Fire Suppression</a></h3>
+                        <div class="single-featured-item">
+                            <div class="featured-icon">
+                                <i class="fa fa-edit"></i>
+                            </div>
+                            <p>Responding to and extinguishing fires using various techniques, equipment, and firefighting agents.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- single featured item -->
+                <!-- single featured item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-featured-item-wrap">
+                        <h3><a href="#">Emergency Medical Services</a></h3>
+                        <div class="single-featured-item">
+                            <div class="featured-icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <p>Providing basic life support and first aid in emergencies until advanced medical assistance arrives.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- single featured item -->
+                <!-- single featured item -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-featured-item-wrap">
+                        <h3><a href="#">Rescue Operations</a></h3>
+                        <div class="single-featured-item">
+                            <div class="featured-icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <p>Conducting rescue operations in various scenarios, such as vehicle accidents, swiftwater rescues, and high-angle rescues.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- single featured item -->
+            </div>
+        </div>
+    </section>
+    <!-- ====== //Featured Area ====== -->
+
+   
+    <!-- ====== Fact Counter Section ====== -->
+    <!-- ====================================================================
+            NOTE: You need to change  'data-count="10"' and 'p' Eliments
+        ===================================================================== -->
+    <section class="section-padding pb-70 bg-img fact-counter" id="counter" style="background-image: url({% static 'images/fan-fact-bg.jpg' %})">
+        <div class="container">
+            <div class="row">
+                <!-- Single Fact Counter -->
+                <div class="col-lg-3 co col-md-6 l-md-6 text-center">
+                    <div class="single-fun-fact">
+                        <h2><span class="counter-value" data-count="10">0</span>+</h2>
+                        <p>Years Experience</p>
+                    </div>
+                </div>
+                <!-- // Single Fact Counter -->
+                <!-- Single Fact Counter -->
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="single-fun-fact">
+                        <h2><span class="counter-value" data-count="1017">0</span>+</h2>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <!-- // Single Fact Counter -->
+                <!-- Single Fact Counter -->
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="single-fun-fact">
+                        <h2><span class="counter-value" data-count="02">0</span>+</h2>
+                        <p>Awards Win</p>
+                    </div>
+                </div>
+                <!-- // Single Fact Counter -->
+                <!-- Single Fact Counter -->
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="single-fun-fact">
+                        <h2><span class="counter-value" data-count="1531">0</span>+</h2>
+                        <p>Life Saved</p>
+                    </div>
+                </div>
+                <!-- // Single Fact Counter -->
+            </div>
+        </div>
+    </section>
+    <!-- ====== //Fact Counter Section ====== -->
+
+    <!-- ====== Service Section ====== -->
+    <section id="service" class="section-padding pb-70 service-area bg-light">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 ">
+                    <div class="section-title text-center">
+                        <h2>ABOUT</h2>
+                        <p>Guardians of Safety: Where Courage Meets Compassion.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- //Section Title -->
+
+            <div class="row">
+                <!-- Single Service -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <i class="fa fa-code"></i>
+                        </div>
+                        <h2>Vision</h2>
+                        <p>To be the foremost force in fire fighting and emergency response, setting the standard for excellence in preparedness, prevention, and intervention.</p>
+                    </div>
+                </div>
+                <!-- //Single Service -->
+                <!-- Single Service -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <i class="fa fa-chart-area"></i>
+                        </div>
+                        <h2>Mission</h2>
+                        <p>With a commitment to swift and decisive responses, we minimize damage and protect lives. We actively engage communities through education on fire prevention and emergency preparedness. Our investment in continuous training ensures a highly skilled team. Leveraging cutting-edge technologies enhances our efficiency, and we foster strong partnerships for a collaborative emergency management approach.</p>
+                    </div>
+                </div>
+                <!-- //Single Service -->
+                <!-- Single Service -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-service">
+                        <div class="service-icon">
+                            <i class="fa fa-chart-line"></i>
+                        </div>
+                        <h2>Philosophy</h2>
+                        <p>Built on professionalism, compassion, integrity, adaptability, and a community-centric approach. We celebrate our first year by recommitting to these principles for a safer tomorrow.</p>
+                    </div>
+                </div>
+                <!-- //Single Service -->
+            </div>
+
+        </div>
+    </section>
+    <!-- ====== //Service Section ====== -->
+
+    <!-- ====== //Why choose Me Section ====== -->
+
+
+    <section id="testimonial" class="section-padding bg-secondary testimonial-area">
+        <div class="container bg-white">
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 ">
+                    <div class="section-title text-center">
+                        <h2>Testimonial</h2>
+                        <p>Guardians of Safety: Where Courage Meets Compassion.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- //Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="testimonials owl-carousel" data-ride="carousel">
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="testimonial-quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <p>"We experienced a small fire at our business, and the firefighters were on the scene in minutes. Their quick action prevented significant damage and downtime for us. Their professionalism and efficiency were truly impressive."</p>
+                            <h4>Aseven  <span>Business Owner</span></h4>
+
+                        </div>
+                        <!-- // Single Testimonial -->
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="testimonial-quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <p>"I owe my life to the firefighters who rescued me from a car accident. Their skill and courage were evident throughout the entire rescue operation. Forever grateful for their selfless dedication."</p>
+                            <h4>Emily H. <span>Accident Survivor</span></h4>
+
+                        </div>
+                        <!-- // Single Testimonial -->
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="testimonial-quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <p>"Working alongside the firefighters during a recent community event, I witnessed their commitment to public safety firsthand. Their collaborative approach and readiness to assist in any situation make them an invaluable asset to our community."</p>
+                            <h4>Lisa G.<span>Emergency Response Volunteer</span></h4>
+
+                        </div>
+                        <!-- // Single Testimonial -->
+                     
+                        <!-- Single Testimonial -->
+                        <div class="single-testimonial text-center">
+                            <div class="testimonial-quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <p>"The firefighters in our neighborhood are more than just first responders; they're like family. Their dedication to keeping us safe, whether through prevention programs or immediate response, creates a sense of security that is priceless."</p>
+                            <h4>Rebecca S. <span>Local Resident:</span></h4>
+
+                        </div>
+                        <!-- // Single Testimonial -->
+                         <div class="single-testimonial text-center">
+                            <div class="testimonial-quote">
+                                <i class="fa fa-quote-right"></i>
+                            </div>
+                            <p>"The firefighters not only respond to emergencies but also visit local schools, educating our kids about fire safety. My children came home excitedly sharing what they learned, and as a parent, that proactive approach to community safety means everything."</p>
+                            <h4>Man Kush  <span>Parent</span></h4>
+
+                        </div>
+                        <!-- // Single Testimonial -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== // Testimonial Section ====== -->
+
+    <!-- ====== Team Section ====== -->
+    <section class="section-padding pb-70 team-area">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 ">
+                    <div class="section-title text-center">
+                        <h2>TEAM</h2>
+                        <p>Meet the team
+                </p>
+                    </div>
+                </div>
+            </div>
+            <!-- //Section Title -->
+            <div class="row">
+                <!-- Single Team -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team">
+                        <div class="team-thumb" style="background-image: url({% static 'images/team/img-1.jpeg' %})">
+                            <div class="team-social">
+  <a target="_blank" href="#"><i class="fab fa-globe"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4>James Mwangi</h4>
+                            <span>CEO Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Team -->
+                <!-- Single Team -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team">
+                        <div class="team-thumb" style="background-image: url({% static 'images/team/img-2.jpg' %})">
+                            <div class="team-social">
+                                <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4>Kinuthia Omosh</h4>
+                            <span>Head of Team</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Team -->
+                <!-- Single Team -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team">
+                        <div class="team-thumb" style="background-image: url({% static 'images/team/img-3.jpg' %})">
+                            <div class="team-social">
+                                <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4>Abdi Ahmed</h4>
+                            <span>Rescue Team Lead</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Team -->
+                <!-- Single Team -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-team">
+                        <div class="team-thumb" style="background-image: url({% static 'images/team/img-4.jpg' %})">
+                            <div class="team-social">
+                                <a target="_blank" href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a>
+                                <a target="_blank" href="#"><i class="fab fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-content">
+                            <h4>Mary Chebet </h4>
+                            <span>Medical Team Lead</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Single Team -->
+            </div>
+        </div>
+    </section>
+    <!-- ====== // Team Section ====== -->
+
+
+    <!-- ====== Call to Action Area ====== -->
+    <section class="section-padding call-to-action-aria bg-secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h2>ABOUT US</h2>
+                    <p>We are a seasoned Fire Fighting Emergency Response Team, dedicated to safeguarding lives, property, and the environment. Our team of skilled professionals is committed to rapid and effective intervention in emergencies.</p>
+                </div>
+                <div class="col-lg-3">
+                    <div class="cta-button">
+                        <div class="d-table">
+                            <div class="d-table-cell">
+                                <a href="#" class="button">Make a report</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ====== // Call to Action Area ====== -->
+
+
+    <!-- ====== Contact Area ====== -->
+    <section id="contact" class="section-padding contact-section bg-light">
+        <div class="container">
+            <!-- Section Title -->
+            <div class="row justify-content-center">
+                <div class="col-lg-6 ">
+                    <div class="section-title text-center">
+                        <h2>Make a report</h2>
+                        <p>Our team of skilled professionals is committed to rapid and effective intervention in emergencies.</p>
+                        <a href="{% url "reporting" %}" class="button smooth-scroll text-dark">Make a report</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- //Section Title -->
+
+            <!-- Contact Form -->
+            {% comment %} <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <!-- Form -->
+                    <form id="contact-form" action="mail.php" method="post" class="contact-form bg-white">
+                        <div class="row">
+                            <div class="col-lg-6 form-group">
+                                <input type="text" class="form-control" name="name" required placeholder="Name">
+                            </div>
+                            <div class="col-lg-6 form-group">
+                                <input type="email" class="form-control" name="email" required placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="subject" required placeholder="Subject">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="message" id="" class="form-control" required placeholder="Message"></textarea>
+                        </div>
+                        <div class="form-btn text-center">
+                            <button class="button" type="submit">Submit</button>
+                            <p class="form-message"></p>
+                        </div>
+                    </form>
+                    <!-- // Form -->
+                </div>
+            </div> {% endcomment %}
+            <!-- // Contact Form -->
+        </div>
+    </section>
+    <!-- ====== // Contact Area ====== -->
+
+
+    <!-- ====== Footer Area ====== -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="copyright-text">
+                        <p class="text-white">&copy; 2023 <a href="https://www.namshadesigns.work.gd/">Namsha Designs</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ====== // Footer Area ====== -->
+
+
+
+
+
+
+     <!-- ====== ALL JS ====== -->
+   <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/lightbox.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.mixitup.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/typed.js' %}"></script>
+    <script src="{% static 'js/skill.bar.js' %}"></script>
+    <script src="{% static 'js/fact.counter.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+
+</html>
